@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte y Cultura Secundaria | Unidad 7 - Material editable en Word</title>
+    <meta name="description" content="Material completo de Arte y Cultura para secundaria. Unidad 7, sesiones y fichas 100% editables en Word. Personalización gratis con el pack de 4 o 5 grados.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f5f8fc;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #1F4E79 0%, #2E86AB 100%);
+            color: white;
+            padding: 50px 0 60px;
+            text-align: center;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 2.3em;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+        .hero .sub {
+            font-size: 1.15em;
+            opacity: 0.95;
+            margin-bottom: 25px;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .beneficios {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .beneficio {
+            background: rgba(255,255,255,0.15);
+            padding: 12px 22px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+        .contador-visitas {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-bottom: 22px;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .contador-visitas strong {
+            font-size: 1.1em;
+        }
+        .btn-whatsapp {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 16px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.15em;
+            font-weight: 700;
+            margin: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(37,211,102,0.4);
+        }
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(37,211,102,0.5);
+        }
+        .btn-muestra {
+            display: inline-block;
+            background: #E67E22;
+            color: white;
+            padding: 16px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.15em;
+            font-weight: 700;
+            margin: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(230,126,34,0.4);
+        }
+        .btn-muestra:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(230,126,34,0.5);
+        }
+        .contador-descargas {
+            display: block;
+            margin-top: 12px;
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .contador-descargas strong {
+            font-size: 1.1em;
+        }
+
+        /* SECCIONES */
+        section {
+            padding: 55px 0;
+        }
+        section h2 {
+            text-align: center;
+            font-size: 1.9em;
+            color: #1F4E79;
+            margin-bottom: 10px;
+        }
+        section .subtitulo {
+            text-align: center;
+            color: #555;
+            margin-bottom: 40px;
+            font-size: 1.05em;
+        }
+
+        /* INCLUYE */
+        .grid-incluye {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+        .card-incluye {
+            background: white;
+            border-radius: 12px;
+            padding: 28px 22px;
+            text-align: center;
+            box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+            border-top: 4px solid #2E86AB;
+            transition: transform 0.2s;
+        }
+        .card-incluye:hover {
+            transform: translateY(-4px);
+        }
+        .card-incluye .icono {
+            font-size: 2.5em;
+            margin-bottom: 12px;
+        }
+        .card-incluye h3 {
+            color: #1F4E79;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        .card-incluye p {
+            font-size: 0.92em;
+            color: #555;
+        }
+        .destacado-word {
+            background: #FFF8E1;
+            border: 2px solid #E67E22;
+            border-radius: 12px;
+            padding: 18px 25px;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.05em;
+        }
+        .destacado-word strong {
+            color: #E67E22;
+        }
+
+        /* GRADOS */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+        .tab {
+            padding: 10px 22px;
+            background: white;
+            border: 2px solid #2E86AB;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #2E86AB;
+            transition: all 0.2s;
+        }
+        .tab.active, .tab:hover {
+            background: #2E86AB;
+            color: white;
+        }
+        .panel-grado {
+            display: none;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+        }
+        .panel-grado.active {
+            display: block;
+        }
+        .panel-grado h3 {
+            color: #1F4E79;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #D6EAF8;
+            padding-bottom: 10px;
+        }
+        .panel-grado h4 {
+            color: #2E86AB;
+            margin: 18px 0 10px;
+        }
+        .panel-grado ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .panel-grado ul li {
+            margin-bottom: 5px;
+            font-size: 0.95em;
+        }
+        .btn-ver-muestra {
+            display: inline-block;
+            background: #E67E22;
+            color: white;
+            padding: 10px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+        .btn-ver-muestra:hover {
+            background: #cf6d15;
+        }
+
+        /* MUESTRA */
+        .muestra-box {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+            text-align: center;
+        }
+        .tabs-muestra {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 22px;
+        }
+        .tab-muestra {
+            padding: 10px 26px;
+            background: #f0f7fd;
+            border: 2px solid #2E86AB;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #2E86AB;
+            transition: all 0.2s;
+            font-size: 0.95em;
+        }
+        .tab-muestra.active, .tab-muestra:hover {
+            background: #2E86AB;
+            color: white;
+        }
+        .lector-pdf {
+            width: 100%;
+            height: 550px;
+            border: 2px solid #D6EAF8;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        .lector-pdf.active {
+            display: block;
+        }
+        .contador-descargas-seccion {
+            font-size: 1.05em;
+            color: #1F4E79;
+            margin-bottom: 15px;
+        }
+        .contador-descargas-seccion strong {
+            font-size: 1.4em;
+            color: #E67E22;
+        }
+        .botones-descarga {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .btn-descarga {
+            display: inline-block;
+            background: #E67E22;
+            color: white;
+            padding: 12px 26px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            transition: background 0.2s;
+        }
+        .btn-descarga:hover {
+            background: #cf6d15;
+        }
+        .btn-descarga.secundario {
+            background: #2E86AB;
+        }
+        .btn-descarga.secundario:hover {
+            background: #1F4E79;
+        }
+
+        /* PRECIOS */
+        .tabla-precios {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+        }
+        .tabla-precios th {
+            background: #1F4E79;
+            color: white;
+            padding: 14px;
+            font-size: 0.95em;
+        }
+        .tabla-precios td {
+            padding: 12px 14px;
+            text-align: center;
+            border-bottom: 1px solid #e8eef5;
+            font-size: 0.95em;
+        }
+        .tabla-precios tr:nth-child(even) {
+            background: #f8fbfe;
+        }
+        .tabla-precios .precio {
+            font-weight: 700;
+            color: #1F4E79;
+            font-size: 1.05em;
+        }
+        .tabla-precios .gratis {
+            color: #27ae60;
+            font-weight: 700;
+        }
+        .destacado-personalizacion {
+            background: #E8F8F0;
+            border: 2px solid #27ae60;
+            border-radius: 12px;
+            padding: 18px 25px;
+            text-align: center;
+            margin-top: 25px;
+            font-size: 1.05em;
+        }
+        .destacado-personalizacion strong {
+            color: #27ae60;
+        }
+
+        /* PAGO */
+        .pago-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 22px;
+            text-align: center;
+        }
+        .pago-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px 20px;
+            box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+        }
+        .pago-card .icono-pago {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .pago-card h3 {
+            color: #1F4E79;
+            margin-bottom: 6px;
+        }
+        .pago-card p {
+            font-size: 0.92em;
+            color: #666;
+        }
+
+        /* PASOS */
+        .pasos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+        .paso-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px 22px;
+            box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+            border-left: 5px solid #E67E22;
+            position: relative;
+        }
+        .paso-card .numero {
+            position: absolute;
+            top: -12px;
+            left: 18px;
+            background: #E67E22;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.95em;
+        }
+        .paso-card h3 {
+            color: #1F4E79;
+            margin: 12px 0 6px;
+            font-size: 1.05em;
+        }
+        .paso-card p {
+            font-size: 0.92em;
+            color: #555;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        .faq-pregunta {
+            padding: 18px 22px;
+            font-weight: 600;
+            color: #1F4E79;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.02em;
+        }
+        .faq-pregunta:hover {
+            background: #f0f7fd;
+        }
+        .faq-respuesta {
+            padding: 0 22px 18px;
+            color: #555;
+            display: none;
+            font-size: 0.95em;
+        }
+        .faq-item.open .faq-respuesta {
+            display: block;
+        }
+        .faq-item.open .faq-pregunta {
+            background: #e8f2fa;
+        }
+
+        /* WHATSAPP FLOTANTE */
+        .whatsapp-flotante {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            color: white;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            text-decoration: none;
+            box-shadow: 0 4px 18px rgba(37,211,102,0.5);
+            z-index: 1000;
+            transition: transform 0.2s;
+        }
+        .whatsapp-flotante:hover {
+            transform: scale(1.1);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1F4E79;
+            color: #cde0f0;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9em;
+        }
+        footer strong {
+            color: white;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.6em; }
+            .hero .sub { font-size: 1em; }
+            .btn-whatsapp, .btn-muestra { padding: 14px 30px; font-size: 1em; display: block; margin: 10px auto; }
+            .tabla-precios { font-size: 0.85em; }
+            .tabla-precios th, .tabla-precios td { padding: 8px 6px; }
+            .lector-pdf { height: 350px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ==================== HERO ==================== -->
+<header class="hero">
+    <div class="container">
+        <h1>Arte y Cultura para Secundaria<br>Unidad 7 · Material 100% editable en Word</h1>
+        <p class="sub">Unidad didáctica, 4 sesiones de aprendizaje y 4 fichas de actividades listas para usar en tu aula. Adapta, ajusta y personaliza cada recurso según tu contexto.</p>
+
+        <div class="beneficios">
+            <span class="beneficio">📝 100% editable en Word</span>
+            <span class="beneficio">⚡ Entrega inmediata por Drive</span>
+            <span class="beneficio">🎯 Personalización disponible</span>
+        </div>
+
+        <div class="contador-visitas">
+            👁 Visitas: <strong id="contador-visitas">0</strong>
+        </div>
+
+        <br>
+        <a href="https://wa.me/51966154072?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20el%20material%20de%20Arte%20y%20Cultura%20para%20secundaria" class="btn-whatsapp" target="_blank">📲 Pedir por WhatsApp</a>
+        <a href="#muestra" class="btn-muestra">📥 Ver muestra gratis</a>
+
+        <span class="contador-descargas">
+            📥 Descargas de la muestra: <strong id="contador-descargas">0</strong>
+        </span>
+    </div>
+</header>
+
+<!-- ==================== INCLUYE ==================== -->
+<section>
+    <div class="container">
+        <h2>¿Qué incluye el material?</h2>
+        <p class="subtitulo">Todo lo que necesitas para desarrollar la Unidad 7 de Arte y Cultura</p>
+        <div class="grid-incluye">
+            <div class="card-incluye">
+                <div class="icono">📘</div>
+                <h3>Unidad didáctica completa</h3>
+                <p>Con situación significativa, propósitos, enfoques, secuencia de sesiones y evaluación.</p>
+            </div>
+            <div class="card-incluye">
+                <div class="icono">📋</div>
+                <h3>4 sesiones de aprendizaje</h3>
+                <p>Detalladas con inicio, desarrollo, cierre y actividades alineadas a las competencias del área.</p>
+            </div>
+            <div class="card-incluye">
+                <div class="icono">✏️</div>
+                <h3>4 fichas de actividades</h3>
+                <p>Listas para imprimir, con anexos, rúbricas y listas de cotejo.</p>
+            </div>
+            <div class="card-incluye">
+                <div class="icono">📂</div>
+                <h3>Anexos y materiales</h3>
+                <p>Rúbricas, listas de cotejo, fichas de apreciación y registro del proceso creativo.</p>
+            </div>
+        </div>
+        <div class="destacado-word">
+            <strong>✅ Todo está en Word 100% editable.</strong> Modifica, ajusta y personaliza cada recurso según tu contexto y realidad educativa.
+        </div>
+    </div>
+</section>
+
+<!-- ==================== GRADOS ==================== -->
+<section style="background: #eef4fa;">
+    <div class="container">
+        <h2>Unidades por grado</h2>
+        <p class="subtitulo">Selecciona el grado para ver el título de la unidad y las sesiones</p>
+
+        <div class="tabs">
+            <button class="tab active" onclick="mostrarGrado(1, event)">1.° Secundaria</button>
+            <button class="tab" onclick="mostrarGrado(2, event)">2.° Secundaria</button>
+            <button class="tab" onclick="mostrarGrado(3, event)">3.° Secundaria</button>
+            <button class="tab" onclick="mostrarGrado(4, event)">4.° Secundaria</button>
+            <button class="tab" onclick="mostrarGrado(5, event)">5.° Secundaria</button>
+        </div>
+
+        <!-- 1° -->
+        <div id="grado-1" class="panel-grado active">
+            <h3>1.° de Secundaria — Unidad 7: "Explorando nuestras emociones a través del arte"</h3>
+            <h4>Sesiones de aprendizaje:</h4>
+            <ul>
+                <li><strong>Sesión 1:</strong> Apreciando el arte que nos rodea: Descubriendo emociones</li>
+                <li><strong>Sesión 2:</strong> Explorando materiales y emociones: Experimentando con texturas y colores</li>
+                <li><strong>Sesión 3:</strong> Creando nuestra obra de arte: Dando forma a nuestras emociones</li>
+                <li><strong>Sesión 4:</strong> Socializando nuestro arte: Compartiendo emociones y aprendizajes</li>
+            </ul>
+            <a href="#muestra" class="btn-ver-muestra">📄 Ver muestra de este grado</a>
+        </div>
+
+        <!-- 2° -->
+        <div id="grado-2" class="panel-grado">
+            <h3>2.° de Secundaria — Unidad 7: "El teatro y la danza como expresión de nuestra identidad"</h3>
+            <h4>Sesiones de aprendizaje:</h4>
+            <ul>
+                <li><strong>Sesión 1:</strong> Apreciando el teatro y la danza: Descubriendo nuestras raíces</li>
+                <li><strong>Sesión 2:</strong> Explorando el movimiento y la expresión: El cuerpo habla</li>
+                <li><strong>Sesión 3:</strong> Creando nuestra obra de teatro o danza: Expresando identidad</li>
+                <li><strong>Sesión 4:</strong> Socializando nuestro arte escénico: Compartiendo quiénes somos</li>
+            </ul>
+            <a href="#muestra" class="btn-ver-muestra">📄 Ver muestra de este grado</a>
+        </div>
+
+        <!-- 3° -->
+        <div id="grado-3" class="panel-grado">
+            <h3>3.° de Secundaria — Unidad 7: "Un viaje por la historia del arte: de la Prehistoria al Renacimiento"</h3>
+            <h4>Sesiones de aprendizaje:</h4>
+            <ul>
+                <li><strong>Sesión 1:</strong> Apreciando el arte de la Prehistoria y Egipto</li>
+                <li><strong>Sesión 2:</strong> Explorando el arte de Grecia y Roma: Belleza y armonía</li>
+                <li><strong>Sesión 3:</strong> Creando inspirados en el Gótico y el Renacimiento</li>
+                <li><strong>Sesión 4:</strong> Socializando nuestro viaje por la historia del arte</li>
+            </ul>
+            <a href="#muestra" class="btn-ver-muestra">📄 Ver muestra de este grado</a>
+        </div>
+
+        <!-- 4° -->
+        <div id="grado-4" class="panel-grado">
+            <h3>4.° de Secundaria — Unidad 7: "El arte como herramienta de transformación social: composición y mensaje"</h3>
+            <h4>Sesiones de aprendizaje:</h4>
+            <ul>
+                <li><strong>Sesión 1:</strong> Apreciando la composición y su función social</li>
+                <li><strong>Sesión 2:</strong> Explorando técnicas y mensajes: Del boceto a la obra</li>
+                <li><strong>Sesión 3:</strong> Creando nuestra obra de arte con mensaje social</li>
+                <li><strong>Sesión 4:</strong> Socializando nuestro arte con propósito</li>
+            </ul>
+            <a href="#muestra" class="btn-ver-muestra">📄 Ver muestra de este grado</a>
+        </div>
+
+        <!-- 5° -->
+        <div id="grado-5" class="panel-grado">
+            <h3>5.° de Secundaria — Unidad 7: "El arte contemporáneo y la estética: proyectos interdisciplinarios con impacto social"</h3>
+            <h4>Sesiones de aprendizaje:</h4>
+            <ul>
+                <li><strong>Sesión 1:</strong> Apreciando el arte contemporáneo y la estética</li>
+                <li><strong>Sesión 2:</strong> Explorando lenguajes y tecnologías para el arte social</li>
+                <li><strong>Sesión 3:</strong> Creando nuestro proyecto interdisciplinario</li>
+                <li><strong>Sesión 4:</strong> Socializando nuestro arte con impacto social</li>
+            </ul>
+            <a href="#muestra" class="btn-ver-muestra">📄 Ver muestra de este grado</a>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== MUESTRA ==================== -->
+<section id="muestra">
+    <div class="container">
+        <h2>Muestra gratis de 1.° grado</h2>
+        <p class="subtitulo">Revisa la unidad, una sesión y una ficha antes de comprar</p>
+        <div class="muestra-box">
+            <div class="contador-descargas-seccion">
+                📥 Esta muestra ha sido descargada <strong id="contador-descargas-2">0</strong> veces
+            </div>
+
+            <!-- Pestañas para cambiar entre unidad, sesión y ficha -->
+            <div class="tabs-muestra">
+                <button class="tab-muestra active" onclick="mostrarMuestra('unidad', event)">📘 Ver unidad</button>
+                <button class="tab-muestra" onclick="mostrarMuestra('sesion', event)">📋 Ver sesión</button>
+                <button class="tab-muestra" onclick="mostrarMuestra('ficha', event)">✏️ Ver ficha</button>
+            </div>
+
+            <!-- UNIDAD -->
+            <iframe id="pdf-unidad" class="lector-pdf active"
+                src="https://drive.google.com/file/d/14aeC_nuQaV0KOd2Z-sIErk6BKxu94gzA/preview"
+                allow="autoplay"></iframe>
+
+            <!-- SESIÓN -->
+            <iframe id="pdf-sesion" class="lector-pdf"
+                src="https://drive.google.com/file/d/1RSkLZaXJiLj1yofbwuWuiAiHe06J4Aut/preview"
+                allow="autoplay"></iframe>
+
+            <!-- FICHA -->
+            <iframe id="pdf-ficha" class="lector-pdf"
+                src="https://drive.google.com/file/d/1LhQxRHSQjZ_Ya-GxVHrx3dOiCVnkv2AI/preview"
+                allow="autoplay"></iframe>
+
+            <div class="botones-descarga">
+                <a href="https://drive.google.com/uc?export=download&id=14aeC_nuQaV0KOd2Z-sIErk6BKxu94gzA" class="btn-descarga" target="_blank" onclick="incrementarDescargas()">📥 Descargar unidad</a>
+                <a href="https://drive.google.com/uc?export=download&id=1RSkLZaXJiLj1yofbwuWuiAiHe06J4Aut" class="btn-descarga secundario" target="_blank" onclick="incrementarDescargas()">📥 Descargar sesión</a>
+                <a href="https://drive.google.com/uc?export=download&id=1LhQxRHSQjZ_Ya-GxVHrx3dOiCVnkv2AI" class="btn-descarga secundario" target="_blank" onclick="incrementarDescargas()">📥 Descargar ficha</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== PRECIOS ==================== -->
+<section style="background: #eef4fa;">
+    <div class="container">
+        <h2>Precios y combos</h2>
+        <p class="subtitulo">Material 100% editable en Word. Personalización disponible.</p>
+
+        <table class="tabla-precios">
+            <thead>
+                <tr>
+                    <th>Opción</th>
+                    <th>Precio</th>
+                    <th>Ahorro</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1 grado (sin personalizar)</td>
+                    <td class="precio">S/ 35</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>1 grado (personalizado)</td>
+                    <td class="precio">S/ 45</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>Pack 2 grados</td>
+                    <td class="precio">S/ 63</td>
+                    <td>S/ 7</td>
+                </tr>
+                <tr>
+                    <td>Pack 3 grados</td>
+                    <td class="precio">S/ 89</td>
+                    <td>S/ 16</td>
+                </tr>
+                <tr>
+                    <td>Pack 4 grados</td>
+                    <td class="precio">S/ 112</td>
+                    <td>S/ 28</td>
+                </tr>
+                <tr>
+                    <td>Pack 5 grados</td>
+                    <td class="precio">S/ 131</td>
+                    <td>S/ 44</td>
+                </tr>
+                <tr>
+                    <td>Pack 2 grados personalizado</td>
+                    <td class="precio">S/ 81</td>
+                    <td>S/ 9</td>
+                </tr>
+                <tr>
+                    <td>Pack 3 grados personalizado</td>
+                    <td class="precio">S/ 115</td>
+                    <td>S/ 20</td>
+                </tr>
+                <tr>
+                    <td>Pack 4 grados personalizado</td>
+                    <td class="precio">S/ 112</td>
+                    <td class="gratis">🎁 Personalización GRATIS</td>
+                </tr>
+                <tr>
+                    <td>Pack 5 grados personalizado</td>
+                    <td class="precio">S/ 131</td>
+                    <td class="gratis">🎁 Personalización GRATIS</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="destacado-personalizacion">
+            🎁 <strong>Beneficio exclusivo:</strong> Si compras el pack de <strong>4 o 5 grados</strong>, la personalización es <strong>100% gratis</strong>. Ahorras hasta <strong>S/ 56</strong> y recibes el material ajustado a tu contexto.
+        </div>
+
+        <div style="text-align: center; margin-top: 35px;">
+            <a href="https://wa.me/51966154072?text=Hola,%20quiero%20el%20pack%20de%20Arte%20y%20Cultura.%20%C2%BFMe%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n?" class="btn-whatsapp" target="_blank">📲 Pedir por WhatsApp</a>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== PAGO ==================== -->
+<section>
+    <div class="container">
+        <h2>Formas de pago</h2>
+        <p class="subtitulo">Elige el método que más te convenga</p>
+        <div class="pago-grid">
+            <div class="pago-card">
+                <img src="https://images.seeklogo.com/logo-png/39/1/yape-app-logo-png_seeklogo-399697.png" 
+                     alt="Logo de Yape" 
+                     style="width: 80px; height: 80px; margin-bottom: 10px; object-fit: contain;">
+                <h3>Yape</h3>
+                <p>Pago rápido y seguro desde tu celular</p>
+            </div>
+            <div class="pago-card">
+                <img src="https://images.seeklogo.com/logo-png/38/1/plin-logo-png_seeklogo-386806.png" 
+                     alt="Logo de Plin" 
+                     style="width: 80px; height: 80px; margin-bottom: 10px; object-fit: contain;">
+                <h3>Plin</h3>
+                <p>Transferencia inmediata entre billeteras digitales</p>
+            </div>
+            <div class="pago-card">
+                <div class="icono-pago">🏦</div>
+                <h3>Transferencia bancaria</h3>
+                <p>BCP, Interbank, BBVA y más</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== PASOS ==================== -->
+<section style="background: #eef4fa;">
+    <div class="container">
+        <h2>¿Cómo recibo mi material?</h2>
+        <p class="subtitulo">Proceso simple y rápido</p>
+        <div class="pasos-grid">
+            <div class="paso-card">
+                <div class="numero">1</div>
+                <h3>Realizas el pago</h3>
+                <p>Por Yape, Plin o transferencia bancaria al número que te indiquemos.</p>
+            </div>
+            <div class="paso-card">
+                <div class="numero">2</div>
+                <h3>Envías la captura</h3>
+                <p>Al WhatsApp <strong>+51 966 154 072</strong> con tu nombre y grado(s) de interés.</p>
+            </div>
+            <div class="paso-card">
+                <div class="numero">3</div>
+                <h3>Recibes los archivos</h3>
+                <p>En <strong>Word y PDF</strong> por correo o Google Drive en menos de 24 horas.</p>
+            </div>
+            <div class="paso-card">
+                <div class="numero">4</div>
+                <h3>Personalización (opcional)</h3>
+                <p>Si pediste personalización, la recibes en <strong>2-3 días hábiles</strong>.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section>
+    <div class="container">
+        <h2>Preguntas frecuentes</h2>
+        <p class="subtitulo">Todo lo que necesitas saber antes de comprar</p>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-pregunta">¿El material es editable? <span>+</span></div>
+            <div class="faq-respuesta">Sí, todo está en <strong>Word 100% editable</strong>. Puedes modificar, ajustar y personalizar cada unidad, sesión y ficha según tu contexto.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-pregunta">¿Sirve para mi región? <span>+</span></div>
+            <div class="faq-respuesta">Sí. Además, si compras el pack de <strong>4 o 5 grados</strong>, te lo personalizamos <strong>gratis</strong> para que se ajuste a tu situación significativa y contexto.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-pregunta">¿Cómo pago? <span>+</span></div>
+            <div class="faq-respuesta">Aceptamos <strong>Yape, Plin y transferencia bancaria</strong>. Te enviamos los datos por WhatsApp.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-pregunta">¿En cuánto tiempo recibo el material? <span>+</span></div>
+            <div class="faq-respuesta">Máximo <strong>24 horas</strong> después de confirmar tu pago. Si pediste personalización, en <strong>2-3 días hábiles</strong>.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-pregunta">¿Puedo pedir solo un grado? <span>+</span></div>
+            <div class="faq-respuesta">Sí, el precio es <strong>S/ 35</strong>. También ofrecemos packs con descuento desde 2 grados.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-pregunta">¿La personalización tiene costo? <span>+</span></div>
+            <div class="faq-respuesta"><strong>S/ 10 por grado</strong>, pero es <strong>gratis si llevas 4 o 5 grados</strong>.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-pregunta">¿Cómo recibo el material? <span>+</span></div>
+            <div class="faq-respuesta">Te lo enviamos por <strong>correo electrónico o Google Drive</strong> en formato Word y PDF, listo para imprimir y editar.</div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== WHATSAPP FLOTANTE ==================== -->
+<a href="https://wa.me/51966154072?text=Hola,%20estoy%20interesado(a)%20en%20el%20material%20de%20Arte%20y%20Cultura.%20%C2%BFMe%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n?" class="whatsapp-flotante" target="_blank">💬</a>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+    <p><strong>Material de Arte y Cultura para Secundaria</strong></p>
+    <p>Unidad 7 · Sesiones · Fichas · 100% editable en Word</p>
+    <p style="margin-top: 12px;">Pedidos por WhatsApp: <strong>+51 966 154 072</strong></p>
+    <p style="margin-top: 8px; font-size: 0.85em;">Entrega inmediata por Google Drive · Pago por Yape, Plin o transferencia</p>
+    <p style="margin-top: 15px; font-size: 0.8em; opacity: 0.7;">&copy; 2026. Todos los derechos reservados.</p>
+</footer>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script>
+    // ==================== TABS DE GRADOS ====================
+    function mostrarGrado(n, event) {
+        document.querySelectorAll('.panel-grado').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.getElementById('grado-' + n).classList.add('active');
+        if (event) event.target.classList.add('active');
+    }
+
+    // ==================== TABS DE MUESTRA ====================
+    function mostrarMuestra(tipo, event) {
+        document.querySelectorAll('.lector-pdf').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.tab-muestra').forEach(t => t.classList.remove('active'));
+        document.getElementById('pdf-' + tipo).classList.add('active');
+        if (event) event.target.classList.add('active');
+    }
+
+    // ==================== FAQ ====================
+    function toggleFaq(el) {
+        el.classList.toggle('open');
+    }
+
+    // ==================== CONTADOR DE VISITAS ====================
+    function initContadorVisitas() {
+        let visitas = localStorage.getItem('visitas_arte');
+        if (!visitas) {
+            visitas = Math.floor(Math.random() * 500) + 1200;
+        }
+        visitas = parseInt(visitas) + 1;
+        localStorage.setItem('visitas_arte', visitas);
+        document.getElementById('contador-visitas').textContent = visitas.toLocaleString('es-PE');
+    }
+
+    // ==================== CONTADOR DE DESCARGAS ====================
+    function initContadorDescargas() {
+        let descargas = localStorage.getItem('descargas_muestra_arte');
+        if (!descargas) {
+            descargas = Math.floor(Math.random() * 80) + 150;
+        }
+        descargas = parseInt(descargas);
+        localStorage.setItem('descargas_muestra_arte', descargas);
+        document.getElementById('contador-descargas').textContent = descargas.toLocaleString('es-PE');
+        document.getElementById('contador-descargas-2').textContent = descargas.toLocaleString('es-PE');
+    }
+
+    function incrementarDescargas() {
+        let descargas = parseInt(localStorage.getItem('descargas_muestra_arte') || 0) + 1;
+        localStorage.setItem('descargas_muestra_arte', descargas);
+        document.getElementById('contador-descargas').textContent = descargas.toLocaleString('es-PE');
+        document.getElementById('contador-descargas-2').textContent = descargas.toLocaleString('es-PE');
+    }
+
+    // ==================== INICIALIZAR ====================
+    document.addEventListener('DOMContentLoaded', function() {
+        initContadorVisitas();
+        initContadorDescargas();
+    });
+</script>
+
+</body>
+</html>
